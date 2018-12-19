@@ -12,5 +12,8 @@ $year = $datatime->format('Y');
 $month = $datatime->format('m');
 
 //現在の月の1日目の曜日を割り出すために現在の日付を１日目として設定
+$datetime->setDate($year, $month, 1);
+$firstWeekDay = (int)$datetime->format('w');
+$lastDay = (int)$datetime->format('t');
 
 ?>
