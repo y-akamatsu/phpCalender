@@ -26,3 +26,28 @@ $lastDay = (int)$datetime->format('t');
 </head>
 <body>
 
+<table>
+<!-- figcaptionタグ -->
+<figcaption><?=$year.'年'.$month.'月'?></figcaption>
+<tr>
+<?php 
+
+for ($i=0; $i<$firstWeekDay; $i++){
+  echo '<td> </td>';
+}
+
+for ($cell=$firstWeekDay; $cell<42; $cell++){
+  if ($cell%7 === 0) {
+    echo '</td><td>';
+  } else {
+    echo '<td></td>';
+  }
+
+  $day++;
+}
+?>
+
+</tr>
+</table>
+</body>
+</html>
